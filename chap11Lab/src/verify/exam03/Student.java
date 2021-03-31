@@ -17,8 +17,8 @@ public class Student {
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Student) {
-			Student student = (Student) obj;
-			if(studentNum.equals(student.studentNum)) {
+			Student student = (Student) obj;  // 강제형 변환, Student <- Object
+			if(studentNum.equals(student.getStudentNum())) {
 				return true;
 			}
 		}
