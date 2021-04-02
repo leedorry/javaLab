@@ -4,38 +4,44 @@ import java.awt.Toolkit;
 
 public class BeepPrintExample2 {
 	public static void main(String[] args) {
-		//how1
-		Runnable beepTask = new BeepTask();
-		Thread thread = new Thread(beepTask);
-		
-		//how2
-		/*Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				Toolkit toolkit = Toolkit.getDefaultToolkit();	
-				for(int i=0; i<5; i++) {		
-					toolkit.beep();
-					try { Thread.sleep(500); } catch(Exception e) {}
+		// 1. Thread를 Thread 클래스로부터 생성
+		// how1 : BeepTask 구현 객체를 이용함
+		/*
+		 * Runnable beepTask = new BeepTask(); 
+		 * Thread thread = new Thread(beepTask);
+		 */
+
+		// how2 : 익명 구현 객체를 이용함
+		/* Thread thread = new Thread(new Runnable() {
+		 * 
+		 * @Override public void run() { Toolkit toolkit = Toolkit.getDefaultToolkit();
+		 * for (int i = 0; i < 5; i++) { toolkit.beep(); try { Thread.sleep(500); }
+		 * catch (Exception e) { } } } });
+		 */
+
+		// how3 : 람다식(익명 구현 객체를 간략하게 표현한 식)을 이용함
+
+		Thread thread = new Thread(() -> {
+			Toolkit toolkit = Toolkit.getDefaultToolkit();
+			for (int i = 0; i < 5; i++) {
+				toolkit.beep();
+				try {
+					Thread.sleep(500);
+				} catch (Exception e) {
 				}
 			}
-		});*/
+		});
 		
-		//how3
-		/*Thread thread = new Thread(() -> {
-			Toolkit toolkit = Toolkit.getDefaultToolkit();	
-			for(int i=0; i<5; i++) {		
-				toolkit.beep();
-				try { Thread.sleep(500); } catch(Exception e) {}
-			}
-		});*/
-		
-		thread.start();
-		
-		for(int i=0; i<5; i++) {
+		// 작업 스레드가 수행
+		thread.start();  
+
+		//  Main 스레드가 수행
+		for (int i = 0; i < 5; i++) {
 			System.out.println("띵");
-			try { Thread.sleep(500); } catch(Exception e) {}
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+			}
 		}
 	}
 }
-
-

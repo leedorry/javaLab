@@ -10,6 +10,7 @@ public class StopFlagExample {
 		} catch (InterruptedException e) {
 		}
 		
+		//printThread.stop();  비정상적으로 끝남
 		printThread.setStop(true);
 	}
 }

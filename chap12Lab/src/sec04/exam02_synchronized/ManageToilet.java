@@ -14,13 +14,13 @@ public class ManageToilet {
 		Family brother = new Family("형", t );
 		Family me = new Family("나", t );
 
-/*** 우선 순위 적용안됨
+// 우선 순위 적용안됨
 		father.setPriority(10);
 		mother.setPriority(7);
 		sister.setPriority(5);
 		brother.setPriority(3);
 		me.setPriority(1);
-*/
+
 
 		// 각 Thread는 Runnable 상태에 들어감
 		father.start();

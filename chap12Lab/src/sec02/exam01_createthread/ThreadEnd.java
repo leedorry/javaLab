@@ -1,5 +1,6 @@
 package sec02.exam01_createthread;
 
+// ThreadEnd는 Thread의 하위 클래스
 public class ThreadEnd extends Thread {
 
 	@Override
@@ -11,10 +12,14 @@ public class ThreadEnd extends Thread {
 	}
 
 	public static void main(String[] args) {
-		ThreadEnd te = new ThreadEnd();
-		// thread를 실행시킴
+		// 2. Thread를 Thread 하위 클래스로부터 생성
+		Thread te = new ThreadEnd();
+		//ThreadEnd te = new ThreadEnd();
+		
+		// 작업 스레드 수행함. thread를 실행시킴
 		te.start();
 
+		// Main 스레드 수행함.
 		// main()내에서 화면에 101부터 120까지 출력
 		for (int i = 101; i <= 120; i++) {
 			System.out.println("-------> main number = " + i);

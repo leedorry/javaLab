@@ -1,5 +1,6 @@
 package sec08.exam01_threadgroup;
 
+// main ½º·¹µå
 public class ThreadGroupExample {
 	public static void main(String[] args) {
 		ThreadGroup myGroup = new ThreadGroup("myGroup");

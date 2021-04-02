@@ -3,10 +3,11 @@ package sec06.exam06_stop;
 public class PrintThread2 extends Thread {
 	public void run() {	
 		//how1
-		/*try {
+		/*
+		try {
 			while(true) {
 				System.out.println("실행 중");
-				Thread.sleep(1);
+				Thread.sleep(1);  // Thread 를 일시 정지 상태로 만든다.
 			}	
 		} catch(InterruptedException e) {		
 		}*/
@@ -14,6 +15,7 @@ public class PrintThread2 extends Thread {
 		//how2
 		while(true) {
 			System.out.println("실행 중");
+				
 			if(Thread.interrupted()) {
 				break;
 			}
