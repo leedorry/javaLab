@@ -16,7 +16,7 @@ public class ConsumerExample {
 		};*/
 		
 		// 람다식
-		Consumer<String> consumer = t -> System.out.println(t + "8");
+		Consumer<String> consumer = t -> System.out.println(t + "8");  // 익명구현객체
 		consumer.accept("java");  // "java8"
 		
 		// 익명구현객체

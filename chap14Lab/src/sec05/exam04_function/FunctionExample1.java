@@ -6,6 +6,7 @@ import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 public class FunctionExample1 {
+	// List 자료구조 = 자료를 인덱스로 관리하는 배열과 비슷하지만 확장을 할 수 있다.
 	private static List<Student> list = Arrays.asList(
 		new Student("홍길동", 90, 96),
 		new Student("신용권", 95, 93)
@@ -36,12 +37,14 @@ public class FunctionExample1 {
 		});*/
 		
 		// 람다식으로 매개변수에 대입한다.
-		printString( t -> t.getName() ); 
+		// Function<Student, String> function = t -> t.getName();
+		// printString(function);  // "홍길동 신용권"
+		printString( t -> t.getName() );   // "홍길동 신용권"
 		
 		System.out.println("[영어 점수]");
-		printInt( t -> t.getEnglishScore() );
+		printInt( t -> t.getEnglishScore() );  // 90 95
 		
 		System.out.println("[수학 점수]");
-		printInt( t -> t.getMathScore() );
+		printInt( t -> t.getMathScore() );  // 96 93
 	}
 }

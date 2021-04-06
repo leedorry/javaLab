@@ -15,12 +15,23 @@ public class OperatorExample {
 	
 	public static void main(String[] args) {
 		//최대값 얻기
+		/* 람다식을 매개변수로 전달한다.
 		int max = maxOrMin(
 			(a, b) -> {
 				if(a>=b) return a;
 				else return b;
 			}
 		);
+		*/
+		// 익명구현객체를 매개변수로 전달한다.
+		int max = maxOrMin(new IntBinaryOperator() {
+			@Override
+			public int applyAsInt(int a, int b) {
+				if(a>=b) return a;
+				else return b;
+			}
+		});
+		
 		System.out.println("최대값: " + max);
 		
 		//최소값 얻기
