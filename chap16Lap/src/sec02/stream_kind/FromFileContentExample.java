@@ -16,7 +16,12 @@ public class FromFileContentExample {
 		Stream<String> stream;
 		
 		//Files.lines() 메소드 이용
-		stream = Files.lines(path, Charset.defaultCharset());
+		stream = Files.lines(path, Charset.defaultCharset());  // Charset=MS949
+		
+		//람다식
+		//stream.forEach(s -> System.out.println(s));
+		
+		// 정적 메소드 참조
 		stream.forEach( System.out :: println );
 		stream.close();
 		System.out.println();
