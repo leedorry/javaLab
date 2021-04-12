@@ -18,15 +18,15 @@ public class ToListExample {
 		//남학생들만 묶어 List 생성
 		List<Student> maleList = totalList.stream()
 				.filter(s->s.getSex()==Student.Sex.MALE)
-				.collect(Collectors.toList());
+				.collect(Collectors.toList());  // 최종 처리, 수집(남학생만으로 수집)
 		maleList.stream()
 			.forEach(s -> System.out.println(s.getName()));
 		
 		System.out.println();
 		
 		//여학생들만 묶어 HashSet 생성
-		Set<Student> femaleSet = totalList.stream()
-				.filter(s -> s.getSex() == Student.Sex.FEMALE)
+		Set<Student> femaleSet = totalList.stream()  // 중간 처리 : 필터링
+				.filter(s -> s.getSex() == Student.Sex.FEMALE)  // 최종 처리 : 수집(여학생만으로 세트를 생성)
 				.collect(Collectors.toCollection(HashSet :: new));
 				//.collect( Collectors.toCollection(()->{return new HashSet<Student>();}) );
 				//.collect( Collectors.toCollection(()->new HashSet<Student>()) );

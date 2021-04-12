@@ -7,11 +7,11 @@ public class MatchExample {
 		int[] intArr = { 2, 4 ,6 };
 		
 		boolean result = Arrays.stream(intArr)
-			.allMatch(a -> a%2==0);
+			.allMatch(a -> a%2==0);  // 최종 처리, 매칭
 		System.out.println("모두 2의 배수인가? " + result);
 		
 		result = Arrays.stream(intArr)
-			.anyMatch(a -> a%3==0);
+			.anyMatch(a -> a%3==0); 
 		System.out.println("하나라도 3의 배수가 있는가? " + result);
 		
 		result = Arrays.stream(intArr)

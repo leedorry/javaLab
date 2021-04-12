@@ -12,17 +12,17 @@ public class ReductionExample {
 		);
 		
 		int sum1 = studentList.stream()
-				.mapToInt(Student :: getScore)
-				.sum();
+				.mapToInt(Student :: getScore)  // 중간 처리 : 매핑(Student -> intStream)
+				.sum();  // 최종 처리 : 합계
 		
 		int sum2 = studentList.stream()
-				.map(Student :: getScore)
-				.reduce((a, b) -> a+b)
+				.map(Student :: getScore)  // 중간 처리 : 매핑(Student -> intStream)
+				.reduce((a, b) -> a+b)  // 최종 처리 : 합계 기능을 구현한다. 
 				.get();
 		
 		int sum3 = studentList.stream()
 						.map(Student :: getScore)
-						.reduce(0, (a, b) -> a+b);
+						.reduce(0, (a, b) -> a+b);  // identity 0은 초기값으로 사용한다.
 		
 		System.out.println("sum1: " + sum1);
 		System.out.println("sum2: " + sum2);
