@@ -18,6 +18,7 @@ public class AppMain extends Application {
 		root.setSpacing(20);	
 		
 		Button btn1 = new Button("버튼1");
+		// 익명구현객체
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
@@ -26,6 +27,7 @@ public class AppMain extends Application {
 		});
 		
 		Button btn2 = new Button("버튼2");
+		// 람다식
 		btn2.setOnAction(event->System.out.println("버튼2 클릭"));
 		
 		root.getChildren().addAll(btn1, btn2);

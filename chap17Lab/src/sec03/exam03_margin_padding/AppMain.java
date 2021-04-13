@@ -10,13 +10,13 @@ import javafx.stage.Stage;
 public class AppMain extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		//ÆÐµù ¼³Á¤-----------------------
+		//ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½-----------------------
 		/*HBox hbox = new HBox();			
 		hbox.setPadding(new Insets(50, 10, 10, 50)); 
 			Button button = new Button();			
 			button.setPrefSize(100, 100);*/		
 		
-		//¸¶Áø ¼³Á¤------------------------
+		//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½------------------------
 		HBox hbox = new HBox();			
 			Button button = new Button();		
 			button.setPrefSize(100, 100);
