@@ -17,7 +17,7 @@ public class AppMain extends Application {
 		root.setAlignment(Pos.CENTER);
 		root.setSpacing(20);	
 		
-		Button btn1 = new Button("버튼1");
+		Button btn1 = new Button("버튼1");  // 버튼 객체를 대입시킨다.
 		// 익명구현객체
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
