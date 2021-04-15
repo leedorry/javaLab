@@ -6,7 +6,7 @@ import java.io.InputStream;
 public class ReadExample3 {
 
 	public static void main(String[] args) throws Exception {
-		InputStream is = new FileInputStream("C:/Temp/test.txt");
+		InputStream is = new FileInputStream("C:/temp/test.txt");
 		int readByteNo;
 		byte[] readBytes = new byte[8];
 		readByteNo = is.read(readBytes, 2, 3);

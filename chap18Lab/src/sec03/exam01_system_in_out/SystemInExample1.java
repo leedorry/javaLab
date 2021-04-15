@@ -11,7 +11,8 @@ public class SystemInExample1 {
 		System.out.println("4. 종료 하기");
 		System.out.print("메뉴를 선택하세요: ");
 		
-		InputStream is = System.in;
+		// 바이트기반의 입력스트림을 생성한다.;
+		InputStream is = System.in;  //콘솔의 바이트기반 입력스트림
 		char inputChar = (char) is.read();			
 		switch(inputChar) {
 			case '1':

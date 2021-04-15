@@ -7,7 +7,7 @@ public class WriteExample2 {
 
 	public static void main(String[] args) throws Exception {
 		Writer writer = new FileWriter("C:/Temp/test.txt");
-		char[] data = "ȫ�浿".toCharArray();
+		char[] data = "ABCD".toCharArray();
 		writer.write(data);
 
 		writer.flush();
